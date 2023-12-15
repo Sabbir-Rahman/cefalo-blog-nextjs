@@ -20,7 +20,7 @@ const Card = ({ blog, img }) => {
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {blog.title}
           </h5>
-          {/* <Link to={`${AUTHOR_BLOGS_URL}${blog.authorId}`}> */}
+          <Link href={`${AUTHOR_BLOGS_URL}${blog.authorId}`}>
             {' '}
             <h5 className="mb-2 text-lg font-light  tracking-tight text-gray-900 dark:text-white">
               <span className="underline cursor-pointer">
@@ -29,14 +29,14 @@ const Card = ({ blog, img }) => {
               </span>{' '}
               <span className="italic">{blog.time}</span>
             </h5>
-          {/* </Link> */}
+          </Link>
 
           <p className="w-full mb-3 font-normal text-gray-700 dark:text-gray-400 truncate-words">
             {blog.body}
           </p>
-          {/* <Link to={`${BLOG_DETAILS_URL}${blog.blogId}`} className="ml-auto"> */}
+          <Link href={`${BLOG_DETAILS_URL}${blog.blogId}`} className="ml-auto">
             <button className="btn-primary ml-auto">Read More ...</button>
-          {/* </Link> */}
+          </Link>
         </div>
       </div>
     </div>
