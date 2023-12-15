@@ -9,11 +9,12 @@ const Card = ({ blog, img }) => {
     process.env.AUTHOR_BLOGS_URL || '/blogs/author/';
   const BLOG_DETAILS_URL =
     process.env.BLOG_DETAILS_URL || '/blogs/';
-
+    {console.log(img)}
   return (
+    
     <div className="flex justify-center mt-10">
       <div className="card-background">
-        {/* <Image className="card-img" src={img} alt="card-img" width={200} height={250}/> */}
+        <Image className="card-img" src={img} alt="card-img" width={200} height={250}/>
         <div className="flex flex-col p-4 leading-normal w-full">
           
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
