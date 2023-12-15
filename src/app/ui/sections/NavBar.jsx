@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBlog } from '@fortawesome/free-solid-svg-icons';
 import '../public/css/navbar.css';
 import { useState } from 'react';
-import NavLinks from './nav-links';
+import NavLinks from '../components/nav-links';
 
 const NavBar = () => {
   const [isSmallMenuOpen, setIsSmallMenuOpen] = useState(false);
