@@ -2,8 +2,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBlog } from '@fortawesome/free-solid-svg-icons';
 import '../public/css/navbar.css';
+import { useState } from 'react';
+import NavLinks from './nav-links';
 
 const NavBar = () => {
+  const [isSmallMenuOpen, setIsSmallMenuOpen] = useState(false);
   return (
     <div>
       <nav className="navbar-bg">
@@ -47,6 +50,15 @@ const NavBar = () => {
             >
               Login
             </button>
+          </div>
+          <div
+            className={`items-center justify-between ${
+              !isSmallMenuOpen && 'hidden'
+            } w-full md:flex md:w-auto md:order-1`}
+          >
+            <ul className="navbar-list">
+              <NavLinks />
+            </ul>
           </div>
         </div>
       </nav>
