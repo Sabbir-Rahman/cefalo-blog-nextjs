@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import NavBar from './ui/sections/NavBar';
+import Blogs from '@/app/ui/sections/Blogs'
 
 export default function Home() {
   return (
     <div>
       <NavBar />
-      <h2>Hello from next</h2>
+      <Blogs/>
     </div>
   );
 }
