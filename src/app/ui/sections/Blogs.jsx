@@ -1,14 +1,13 @@
-'use client';
-import { useState } from 'react';
 import blogsData from '../../lib/placeholder-data';
 import BlogCard from '../components/Blogcard';
+import { getBlogs } from '@/app/lib/data';
 
-const Blogs = () => {
-  const [blogs, setBlogs] = useState(blogsData);
-
+const Blogs = async () => {
+  const blogs = await getBlogs()
+  
   return (
     <>
-      {blogs.map((blog) => (
+      {blogs.data.map((blog) => (
         <BlogCard
           blog={blog}
           key={blog.id}

@@ -11,7 +11,7 @@ const NavBar = () => {
     <div>
       <nav className="navbar-bg">
         <div className="navbar-flex">
-          <FontAwesomeIcon icon={faBlog} style={{ color: '#35a29f' }} />
+          {/* <FontAwesomeIcon icon={faBlog} style={{ color: '#35a29f' }} /> */}
           <span className="navbar-logo-text">&nbsp;Bloggie</span>
 
           <div className="flex md:order-2">

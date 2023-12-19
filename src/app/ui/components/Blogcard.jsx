@@ -1,5 +1,3 @@
-"use-client"
-
 import Link from 'next/link';
 import '../../public/css/component.css';
 import Image from 'next/image';
@@ -14,7 +12,7 @@ const Card = ({ blog, img }) => {
     
     <div className="flex justify-center mt-10">
       <div className="card-background">
-        <Image className="card-img" src={img} alt="card-img" width={200} height={250}/>
+        <Image className="card-img" src={img} alt="card-img" width={200} height={250} loading='lazy'/>
         <div className="flex flex-col p-4 leading-normal w-full">
           
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
