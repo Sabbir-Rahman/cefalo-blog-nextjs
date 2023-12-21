@@ -23,7 +23,7 @@ const Card = ({ blog, img }) => {
             <h5 className="mb-2 text-lg font-light  tracking-tight text-gray-900 dark:text-white">
               <span className="underline cursor-pointer">
                 {' '}
-                {blog.authorName}
+                {/* {blog.authorName} */}Md Sabbir Rahman
               </span>{' '}
               <span className="italic">{blog.time}</span>
             </h5>

@@ -23,7 +23,6 @@ export default function NavLinks() {
             <Link
               key={link.name}
               href={link.href}
-              prefetch={true}
               className={clsx(
                 'block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0',
                 {

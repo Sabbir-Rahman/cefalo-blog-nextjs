@@ -1,15 +1,16 @@
 import blogsData from '../../lib/placeholder-data';
 import BlogCard from '../components/Blogcard';
-import { getBlogs } from '@/app/lib/data';
+import { getBlogs, getBlogsByGraphQl } from '@/app/lib/data';
 
 const Blogs = async () => {
-  const blogs = await getBlogs()
+  const blogs = await getBlogsByGraphQl()
+  console.log(blogs.data.blogs.data)
   
   return (
     <>
-      {blogs.data.map((blog) => (
+      {blogs.data.blogs.data.map((blog) => (
         <BlogCard
-          blog={blog}
+          blog={blog.attributes}
           key={blog.id}
           img={`https://picsum.photos/id/${Math.floor(
             Math.random() * 100
